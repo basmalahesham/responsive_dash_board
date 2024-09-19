@@ -28,6 +28,7 @@ class AllExpensesItemsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemCount: items.length,
       itemBuilder: (context, index) {
         return AllExpensesItem(
