@@ -14,6 +14,7 @@ class AllExpensesItem extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -23,24 +24,27 @@ class AllExpensesItem extends StatelessWidget {
           AllExpensesItemHeader(
             image: allExpensesItemModel.image,
           ),
-          SizedBox(height: 34,),
+          const SizedBox(
+            height: 34,
+          ),
           Text(
             allExpensesItemModel.title,
             style: AppStyles.styleSemiBold16,
-            ),
-          SizedBox(height: 8,),
-
+          ),
+          const SizedBox(
+            height: 8,
+          ),
           Text(
             allExpensesItemModel.date,
             style: AppStyles.styleRegular14,
           ),
-          SizedBox(height: 16,),
-
+          const SizedBox(
+            height: 16,
+          ),
           Text(
             allExpensesItemModel.price,
             style: AppStyles.styleSemiBold24,
           ),
-
         ],
       ),
     );
