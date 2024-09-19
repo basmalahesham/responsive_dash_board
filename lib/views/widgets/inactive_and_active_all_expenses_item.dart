@@ -54,6 +54,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
     );
   }
 }
+
 class ActiveAllExpensesItem extends StatelessWidget {
   const ActiveAllExpensesItem({
     super.key,
@@ -67,9 +68,8 @@ class ActiveAllExpensesItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
-        color: Colors.white,
+        color: const Color(0xFF4DB7F2),
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -78,31 +78,38 @@ class ActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(
             image: allExpensesItemModel.image,
+            imageBackgroundColor: Colors.white.withOpacity(0.10000000149011612),
+            imageColor: Colors.white,
           ),
           const SizedBox(
             height: 34,
           ),
           Text(
             allExpensesItemModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16.copyWith(
+              color: Colors.white,
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             allExpensesItemModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14.copyWith(
+              color: const Color(0xFFFAFAFA),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24,
+            style: AppStyles.styleSemiBold24.copyWith(
+              color: Colors.white,
+            ),
           ),
         ],
       ),
     );
   }
 }
-

@@ -3,13 +3,17 @@ import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/views/widgets/inactive_and_active_all_expenses_item.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.allExpensesItemModel, required this.isSelected});
+  const AllExpensesItem(
+      {super.key,
+      required this.allExpensesItemModel,
+      required this.isSelected});
 
   final AllExpensesItemModel allExpensesItemModel;
-final bool isSelected;
+  final bool isSelected;
   @override
   Widget build(BuildContext context) {
-    return ActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel);
+    return isSelected
+        ? ActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel)
+        : InActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel);
   }
 }
-
