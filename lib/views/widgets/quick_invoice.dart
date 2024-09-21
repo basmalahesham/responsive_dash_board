@@ -7,7 +7,7 @@ class QuickInvoice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
+    return const CustomBackgroundContainer(
       child: Column(
         children: [
           QuickInvoiceHeader(),

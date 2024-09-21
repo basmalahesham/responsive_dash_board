@@ -8,19 +8,19 @@ class QuickInvoiceHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
+        const Text(
           'Quick Invoice',
           style: AppStyles.styleSemiBold20,
         ),
-        Spacer(),
+        const Spacer(),
         Container(
           width: 48,
           height: 48,
-          decoration: ShapeDecoration(
+          decoration: const ShapeDecoration(
             color: Color(0xFFFAFAFA),
             shape: OvalBorder(),
           ),
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Color(
               0xFF4EB7F2,
