@@ -18,4 +18,3 @@ class IncomeSection extends StatelessWidget {
     );
   }
 }
-
