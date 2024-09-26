@@ -19,6 +19,7 @@ class IncomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     log(MediaQuery.sizeOf(context).width.toString());
     return Column(
+      //crossAxisAlignment: CrossAxisAlignment.start,
       children: items.map((e)=>ItemDetails(itemDetailsModel: e)).toList(),
     );
      /* ListView.builder(

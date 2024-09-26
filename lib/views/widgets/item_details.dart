@@ -9,15 +9,20 @@ class ItemDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+       contentPadding: EdgeInsets.zero,
+       horizontalTitleGap: 0,
+       minVerticalPadding: 0,
       leading: Container(
         width: 12,
         height: 12,
-        decoration: ShapeDecoration(
+        decoration: BoxDecoration(
           color: itemDetailsModel.color,
-          shape: const OvalBorder(),
+          shape: BoxShape.circle,
         ),
       ),
       title: Text(
+        // maxLines: 1,
+        // overflow: TextOverflow.ellipsis,
         itemDetailsModel.title,
         style: AppStyles.styleRegular16(context),
       ),
